@@ -7,9 +7,6 @@ $dark-grayish-blue: hsl(230, 11%, 40%);
 $grayish-blue: hsl(231, 7%, 65%);
 $light-grayish-blue: hsl(207, 33%, 95%);
 
-//
-//
-
 // global styles
 * {
   box-sizing: border-box;
@@ -20,6 +17,19 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   margin: 0;
+  height: 100vh;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $light-grayish-blue;
+    height: 57vh;
+    width: 47vw;
+    z-index: -1;
+    border-bottom-left-radius: 50px;
+  }
 }
 
 h1,
@@ -34,8 +44,10 @@ a {
 h3 {
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: $dark-grayish-blue;
+  letter-spacing: 4px;
+  color: $grayish-blue;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
 }
 
 .container {
@@ -44,7 +56,7 @@ h3 {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 100%;
-  width: 1200px;
+  width: 80%;
 
   & > div {
     flex: 1;
@@ -53,26 +65,39 @@ h3 {
 
 // navigation styles
 nav {
-  // margin: 3rem 0 0 0;
-  min-height: 10vh;
+  padding-top: 2rem;
+  margin-bottom: -1rem;
+
+  .logo {
+    width: 1.8rem;
+  }
 
   ul {
     padding: 0;
     list-style-type: none;
     display: flex;
 
+    .faded {
+      a {
+        color: $grayish-blue;
+      }
+    }
+    .dot a {
+      font-size: 2.5rem;
+      position: relative;
+      top: -1rem;
+    }
+
     li {
-      margin-left: 2rem;
+      margin-left: 2.5rem;
 
       a {
         color: $very-dark-blue;
         font-weight: 700;
         text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
       }
-    }
-
-    .faded a {
-      color: $dark-grayish-blue;
     }
   }
 }
@@ -81,20 +106,68 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 80%;
+  overflow: hidden;
 
   .heading {
+    max-width: 50%;
+    margin-right: -22rem;
     span {
       background-color: $very-dark-blue;
       color: white;
-      padding: 0.5rem 0.8rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 30px;
+      margin-right: 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
+
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: 1px;
+      max-width: 500px;
+    }
+
+    p {
+      color: $dark-grayish-blue;
+      font-size: 1.1rem;
+      max-width: 265px;
+      margin-top: 1.5rem;
+      line-height: 1.3;
     }
   }
-  img {
-    width: 100%;
+
+  .cta {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+
+    .btn {
+      background: $red;
+      border: 0;
+      color: white;
+      padding: 0.8rem 1.7rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 5px;
+      margin-right: 1.5rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .illustration {
+    img {
+      width: 100%;
+      transform: translateX(43%) translateY(35px);
+    }
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .heading {
+    margin-right: -2rem;
   }
 }
