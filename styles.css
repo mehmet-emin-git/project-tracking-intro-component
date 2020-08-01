@@ -72,6 +72,10 @@ nav .logo {
   width: 1.8rem;
 }
 
+nav .hamburger {
+  display: none;
+}
+
 nav ul {
   padding: 0;
   list-style-type: none;
@@ -258,7 +262,7 @@ main .illustration img {
     width: 90%;
   }
   nav {
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
     margin-bottom: 0;
   }
   nav .container {
@@ -270,16 +274,73 @@ main .illustration img {
     width: 2rem;
     margin-left: 0.5rem;
   }
-  nav ul {
+  nav .hamburger {
+    display: block;
+    outline: none;
+  }
+  nav .hamburger .close {
+    display: none;
+    outline: none;
+  }
+  nav .hamburger .close.show-nav {
+    display: block;
+  }
+  nav .hamburger .open {
+    display: block;
+  }
+  nav .hamburger .open.show-nav {
+    display: none;
+  }
+  nav #menu {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: fixed;
+    text-align: center;
+    top: 5rem;
+    left: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: white;
+    width: calc(100% - 3rem);
+    padding: 1rem;
+    letter-spacing: 2px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
   }
-  nav ul li {
-    margin-left: 1rem;
+  nav #menu.show-nav {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
-  nav ul li a {
-    font-size: 0.9rem;
+  nav #menu li {
+    margin: 1rem;
+  }
+  nav #menu li a {
+    font-size: 1.4rem;
+  }
+  nav #menu .dot {
+    position: relative;
+  }
+  nav #menu .dot::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    position: absolute;
+    background-color: #eef3f6;
+    right: -140px;
+  }
+  nav #menu .dot a {
+    display: block;
+    font-size: 0px;
   }
   main {
     text-align: center;
