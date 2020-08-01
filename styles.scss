@@ -7,5 +7,94 @@ $dark-grayish-blue: hsl(230, 11%, 40%);
 $grayish-blue: hsl(231, 7%, 65%);
 $light-grayish-blue: hsl(207, 33%, 95%);
 
-// font-family: 'Barlow', sans-serif;
-// font-family: 'Barlow Condensed', sans-serif;
+//
+//
+
+// global styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $very-dark-blue;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+h1,
+h3,
+button,
+nav,
+a {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $dark-grayish-blue;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+
+  & > div {
+    flex: 1;
+  }
+}
+
+// navigation styles
+nav {
+  // margin: 3rem 0 0 0;
+  min-height: 10vh;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+
+    li {
+      margin-left: 2rem;
+
+      a {
+        color: $very-dark-blue;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+
+    .faded a {
+      color: $dark-grayish-blue;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+
+  .heading {
+    span {
+      background-color: $very-dark-blue;
+      color: white;
+      padding: 0.5rem 0.8rem;
+      border-radius: 30px;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
