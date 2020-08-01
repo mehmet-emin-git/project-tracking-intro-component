@@ -25,8 +25,8 @@ body {
     top: 0;
     right: 0;
     background: $light-grayish-blue;
-    height: 57vh;
-    width: 47vw;
+    height: 53vh;
+    width: 50vw;
     z-index: -1;
     border-bottom-left-radius: 50px;
   }
@@ -47,7 +47,7 @@ h3 {
   letter-spacing: 4px;
   color: $grayish-blue;
   margin-bottom: 1rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -65,11 +65,11 @@ h3 {
 
 // navigation styles
 nav {
-  padding-top: 2rem;
-  margin-bottom: -1rem;
+  padding-top: 3rem;
+  margin-bottom: -2rem;
 
   .logo {
-    width: 1.8rem;
+    width: 2.1rem;
   }
 
   .hamburger {
@@ -93,15 +93,15 @@ nav {
     }
 
     li {
-      margin-left: 2.5rem;
+      margin-left: 3.2rem;
 
       a {
         color: $very-dark-blue;
         font-weight: 700;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 1px;
-        transition: 0.1s ease-in all;
+        transition: 0.2s ease-in all;
 
         &:hover {
           text-decoration: underline;
@@ -120,30 +120,30 @@ main {
 
   .heading {
     max-width: 50%;
-    margin-right: -22rem;
+    // margin-right: -22rem;
     span {
       background-color: $very-dark-blue;
       color: white;
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 0.7rem;
       border-radius: 30px;
-      margin-right: 0.9rem;
-      font-size: 0.8rem;
+      margin-right: 1rem;
+      font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 4.3rem;
       margin: 0;
       line-height: 1;
       letter-spacing: 1px;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     p {
       color: $dark-grayish-blue;
-      font-size: 1.1rem;
-      max-width: 265px;
+      font-size: 1.3rem;
+      max-width: 290px;
       margin-top: 1.5rem;
       line-height: 1.3;
     }
@@ -158,31 +158,30 @@ main {
       background: $red;
       border: 0;
       color: white;
-      padding: 0.8rem 1.7rem;
-      font-size: 0.9rem;
+      padding: 1rem 1.9rem;
+      font-size: 1.1rem;
       font-weight: 700;
       border-radius: 5px;
       margin-right: 1.5rem;
       letter-spacing: 2px;
+      cursor: pointer;
       outline: none;
       transition: 0.2s ease-in-out all;
 
       &:hover {
-        background: lighten($red, 5%);
+        background: lighten($red, 8%);
       }
 
       &:focus {
         outline: none;
       }
     }
-
-    top: -0.1rem;
   }
 
   .illustration {
     img {
       width: 100%;
-      transform: translateX(43%) translateY(35px);
+      transform: scale(1.7) translateX(21%) translateY(5px);
     }
   }
 }
